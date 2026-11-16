@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     # Golang
     go
+    gopls
 
     # Lua
     lua
@@ -24,14 +25,38 @@
     bat
     wget
 
-    # Python
-    python3
+    # Latte Js Specific
+    nodejs_22
+    nodejs_26
+    yarn
+    sqlite
 
     # Rust Specific
     cargo
     rustc
     rust-analyzer
     clippy
+
+    # Python Helpers (to avoid global pip breakage)
+    (python3.withPackages (ps: with ps;  [
+
+      # Data Science
+      jupyterlab
+      notebook
+      numpy
+      pandas
+      matplotlib
+      requests
+
+      # Web Frameworks
+      flask
+      django
+      djangorestframework
+    ]))
+  ];
+
+  nix.settings.experimental-features = [
+    "nix-command" "flakes"
   ];
 
   # Does exactly that

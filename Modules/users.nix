@@ -4,7 +4,7 @@
   boot.loader.systemd-boot.enable = true; # allows the use of sysmd-boot
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Use latest kernel.
+  # Uses the latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "mesh"; # Defines my hostname.
