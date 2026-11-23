@@ -1,7 +1,6 @@
 { config, pkgs, ...}:
 {
-
-  # Zsh config
+  # Z-shell config
   programs.zsh = {
     enable = true;
     shellAliases = {

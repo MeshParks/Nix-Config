@@ -27,7 +27,6 @@
 
     # Latte Js Specific
     nodejs_22
-    nodejs_26
     yarn
     sqlite
 

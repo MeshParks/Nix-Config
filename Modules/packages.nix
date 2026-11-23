@@ -4,24 +4,26 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
 
-      vis # Minimal Vim esque tty editor.
+      vis # I did not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default but don't reallly like it as much.
       fastfetch # I have no need, but I must fetch.
       ghostty # Terminal shell emulator.
-      gnome-extension-manager # 
+      gnome-extension-manager
       gnome-tweaks
+      obs-studio
       zed-editor # The best text editor.
-      vesktop # Discord client.
-      vscodium # Open sourced build of VS code.
+      vesktop
+      jetbrains-toolbox
+      vscodium
       btop
-      penpot-desktop # Figma alternative
-      cowsay 
-      gparted # Partition tool
+      penpot-desktop
+      cowsay
+      gparted
       steam-run
       blender
-      opencode
-      jujutsu # Git variant,
-      bibata-cursors # Cursor theme
-      ntfs3g 
+      lazygit
+      jujutsu
+      bibata-cursors #
+      ntfs3g
       obsidian # Markdown based word editor.
 
       # Flake Specific
@@ -30,7 +32,6 @@
   ];
 
   environment.gnome.excludePackages = with pkgs;[
-    # I have little to no need for these. 
       gnome-tour
       cheese
       gnome-music
@@ -38,12 +39,14 @@
     ];
 
     nixpkgs.config.permittedInsecurePackages = [
-        "electron-42.11.18" # needed this cause it was a missing dependecy.
+        "electron-42.11.18"
       ];
 
   nixpkgs.config.allowUnfree = true; # Allows proprietary software, like obsidian.
-  programs.firefox.enable = true; # Enables firefox
+
+  programs.firefox.enable = true; # Enables firefox, installs it as well.
+
   services.flatpak.enable = true;
-  # Then We Run, flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  # Then We Run, 'flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
 
 }

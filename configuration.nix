@@ -11,17 +11,14 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./Modules/lock.nix
       ./Modules/packages.nix
       ./Modules/parlor.nix
       ./Modules/users.nix
-      ./Modules/shell.nix
+      ./Modules/services.nix
+      ./Modules/programs.nix
     ];
 
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
-
-
