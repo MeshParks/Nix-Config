@@ -8,34 +8,33 @@
       fastfetch # I have no need, but I must fetch.
       ghostty # Terminal shell emulator.
       gnome-extension-manager
-      gnome-tweaks
+      gnome-tweaks # Why is this a separate app from settings fr.
       obs-studio
       zed-editor # The best text editor.
       vesktop
-      jetbrains-toolbox
-      vscodium
+      vscodium # Alternative.
       btop
-      penpot-desktop
+      penpot-desktop # Open Figma alternative.
       cowsay
-      gparted
+      gparted # Partion Editing.
       steam-run
-      blender
-      lazygit
-      jujutsu
-      bibata-cursors #
+      blender # In another life.
+      lazygit # For Larping.
+      jujutsu # Investing in this.
       ntfs3g
       obsidian # Markdown based word editor.
 
       # Flake Specific
-      inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default # The Best Browser On Earth
-      inputs.helium.packages.${system}.default # And then Helium walked in
+      inputs.zen-browser.packages."${pkgs.stdenv.hostPlatform.system}".default # The Best Browser On Earth.
+      inputs.helium.packages.${system}.default # And then Helium walked in, yk what?, after a few weeks, it walks back out.
   ];
 
-  environment.gnome.excludePackages = with pkgs;[
+  environment.gnome.excludePackages = with pkgs; [
       gnome-tour
       cheese
       gnome-music
       epiphany
+
     ];
 
     nixpkgs.config.permittedInsecurePackages = [
@@ -43,8 +42,6 @@
       ];
 
   nixpkgs.config.allowUnfree = true; # Allows proprietary software, like obsidian.
-
-  programs.firefox.enable = true; # Enables firefox, installs it as well.
 
   services.flatpak.enable = true;
   # Then We Run, 'flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'

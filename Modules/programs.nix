@@ -1,6 +1,7 @@
 { config, pkgs, ...}:
 {
-  # Z-shell config
+
+  # Zsh's config.
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -8,7 +9,7 @@
     };
   };
 
-  # Git Config
+  # Git's Config.
   programs.git = {
     enable = true;
     config = {
@@ -16,6 +17,11 @@
         defaultBranch = "main";
       };
     };
+  };
+
+  # Docker's Config.
+  virtualisation.docker = {
+    enable = true;  # Enables the Docker daemon and installs it.
   };
 
 }

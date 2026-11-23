@@ -9,12 +9,12 @@
   imports =
 
     [
-      # Include the results of the hardware scan.
+      # Just Some in the Modules directly and the hardconf.nix
       ./hardware-configuration.nix
       ./Modules/packages.nix
       ./Modules/parlor.nix
-      ./Modules/users.nix
       ./Modules/services.nix
+      ./Labs/niri.nix
       ./Modules/programs.nix
     ];
 
